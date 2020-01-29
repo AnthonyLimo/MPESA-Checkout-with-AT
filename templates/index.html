@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://i2.wp.com/norwaycup.no/wp-content/uploads/2018/12/open.jpg?ssl=1" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Simple Mug</h5>
+          <p class="card-text">Best mug in the world for <br/>KES 250</p>
+          <a href="{{ url_for('check_out') }}" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <br>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Simple Mug
+          <span class="badge badge-primary badge-pill">KES 250</span>
+        </li>      
+    </ul>
+    <br>
+    <form method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="makePayment">Pay with MPESA</button>
+    </form>
+</div>
+{% endblock %}
