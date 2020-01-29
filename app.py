@@ -39,11 +39,11 @@ def check_out():
     return render_template("checkout.html")
 
 
-@app.route("/paymentnotification", methods=["POST"])
+@app.route("/paymentnotification", methods=["POST", "GET"])
 def payment_notification():
-    print(request.values.get("status"))
 
     if request.values.get("status") is "Success":
+        phone_number = request.values.get("")
         sms.send(
             "Thank you for shopping with us! Your payment has been confirmed",
             [request.values.get("phoneNumber")],
